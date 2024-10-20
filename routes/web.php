@@ -59,8 +59,7 @@ Route::get('/authoriz', [\App\Http\Controllers\AuthorizController::class, 'autho
 Route::get('/authorizOnlyAdmin', [\App\Http\Controllers\AuthorizController::class, 'authorizeOnlyAdmin'])->middleware(['auth', 'verified'])->name('authorizOnlyAdmin');
 
 
-
-Route::get('/forCheckMyCode', [\App\Http\Controllers\ForCheckMyCodeController::class, 'forCheckMyCode'])->middleware(['auth', 'verified'])->name('forCheckMyCode');
+Route::get('show', [\App\Http\Controllers\ChangeRolesController::class, 'show'])->middleware(['auth', 'verified'])->name('show');
 
 
 require __DIR__.'/auth.php';

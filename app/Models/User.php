@@ -54,6 +54,7 @@ class User extends Authenticatable
             'role_user',
             'user_id',
             'role_id');
-
     }
+
+
 }

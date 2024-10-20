@@ -6,6 +6,7 @@ namespace App\Console\Commands;
 use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class MyCommand extends Command
 {
@@ -15,13 +16,7 @@ class MyCommand extends Command
 
     public function handle(User $user)
     {
-//        dd($user);
-//dd(Auth::attempt(['email' => $user->email, 'password' => $user->password]));
-        dd(\Auth::check());
-//        dd(Auth::user());
-//        $user = User::query()->findOrFail(Auth::user()->id);
-//        $role = $user->roles->toArray()[0]['role'];
-//        dd($role);
-//        dd('hi');
+        $data2 = DB::select('select u.id, u.name, r.role from users as u inner join role_user as ru on ru.user_id = u.id inner join roles as r on r.id = ru.role_id');
+        dump($data2);
     }
 }

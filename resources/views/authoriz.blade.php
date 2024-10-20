@@ -13,17 +13,17 @@
                 </div>
 
                 {{--       А так можно разрешать/запрещать не всю страницу, а только отдельные куски страницы для авторизированных/не авторизированных пользователей--}}
-                                @can('viewProtectedPart')
+{{--                                @can('viewProtectedPart')--}}
 {{--                                @can('view-protected-part')--}}
-                                <div class="p-6 text-gray-900">
-                                    {{ __("You're name Name!") }}
-                                </div>
-                                @endcan
-                                @cannot('view-protected-part')
-                                <div class="p-6 text-gray-900">
-                                    {{ __("You're name NOT Name!") }}
-                                </div>
-                                @endcannot
+{{--                                <div class="p-6 text-gray-900">--}}
+{{--                                    {{ __("You're name Name!") }}--}}
+{{--                                </div>--}}
+{{--                                @endcan--}}
+{{--                                @cannot('view-protected-part')--}}
+{{--                                <div class="p-6 text-gray-900">--}}
+{{--                                    {{ __("You're name NOT Name!") }}--}}
+{{--                                </div>--}}
+{{--                                @endcannot--}}
 
             </div>
         </div>

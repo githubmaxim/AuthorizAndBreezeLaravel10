@@ -27,6 +27,11 @@
                                     :active="request()->routeIs('authorizOnlyAdmin')">
                             {{ __('Only_For_Admin') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('show')"
+                                    :active="request()->routeIs('show')">
+                            {{ __('SHOW') }}
+                        </x-nav-link>
+
                     </div>
                 @endcan
 
